@@ -387,14 +387,14 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 280
+    xsize 350
     yfill True
 
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
-    xoffset -20
+    xoffset 120
     xmaximum 800
     yalign 1.0
     yoffset -20
