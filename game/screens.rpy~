@@ -358,17 +358,38 @@ screen main_menu():
     ## заменять этот.
     tag menu
 
-    imagemap:
-        ground"gui/main_menu.png"
+    style_prefix "main_menu"
+
+    add gui.main_menu_background
+
+    ## Эта пустая рамка затеняет главное меню.
+    frame:
+        pass
+
+    ## Оператор use включает отображение другого экрана в данном. Актуальное
+    ## содержание главного меню находится на экране навигации.
+    use navigation
+
+    if gui.show_name:
+
+        vbox:
+            text "[config.name!t]":
+                style "main_menu_title"
+
+            text "[config.version]":
+                style "main_menu_version"
+
+    #imagemap:
+    #    ground"gui/main_menu.png"
         #idle""
         #hover""
 
-        hotspot(449, 231, 375, 56) action FileLoad(1, confirm=False, page="auto", newest=True)
-        hotspot(449, 301, 375, 56) action Start()
-        hotspot(449, 371, 375, 56) action ShowMenu("load")
+        #hotspot(449, 231, 375, 56) action Start() продолжить
+    #    hotspot(449, 301, 375, 56) action Start()
+    #    hotspot(449, 371, 375, 56) action ShowMenu("Load")
         #hotspot(449, 231, 375, 56) action Start() галерея
-        hotspot(449, 505, 375, 56) action ShowMenu("preferences")
-        hotspot(1023, 624, 375, 56) action Quit(confirm=True)
+    #    hotspot(449, 505, 375, 56) action ShowMenu("preferences")
+    #    hotspot(1023, 624, 375, 56) action Quit(confirm=True)
 
 
 style main_menu_frame is empty
