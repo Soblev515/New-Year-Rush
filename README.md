@@ -36,6 +36,10 @@ Ren'Py, GIMP, FastStone, Python, Atom
 2. Запустить exe файл.
 
 ### ***Структура приложения:***
+Vn/DemoNovel-32.exe - запуск игры для 32 бит.
+
+Vn/DemoNovel.exe - запуск мгры
+
 Vn/renpy/ - папка с файлами игры.
 
 Vn/game/gui - папка интерфейса(фоны, рамки иконки и т.д.).
