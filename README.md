@@ -41,22 +41,22 @@ Windows.
 2. Запустить exe файл.
 
 ### ***Структура приложения:***
-Vn/DemoNovel-32.exe - запуск игры для 32 бит.
+New-Year-Rush/Game/DemoNovel-32.exe - запуск игры для 32 бит.
 
-Vn/DemoNovel.exe - запуск мгры
+New-Year-Rush/Game/DemoNovel.exe - запуск мгры
 
-Vn/renpy/ - папка с файлами игры.
+New-Year-Rush/Game/renpy/ - папка с файлами игры.
 
-Vn/game/gui - папка интерфейса(фоны, рамки иконки и т.д.).
+New-Year-Rush/Game/game/gui - папка интерфейса(фоны, рамки иконки и т.д.).
 
-Vn/game/images - папка спрайтов и фонов.
+New-Year-Rush/Game/game/images - папка спрайтов и фонов.
 
-Vn/game/saves - папка сохранений.
+New-Year-Rush/Game/game/saves - папка сохранений.
 
-Vn/game/gui.rpy - файл с настройками интерфейса.
+New-Year-Rush/Game/game/gui.rpy - файл с настройками интерфейса.
 
-Vn/game/options.rpy - Данный файл содержит настройки и опции, способные изменить игру.
+New-Year-Rush/Game/game/options.rpy - Данный файл содержит настройки и опции, способные изменить игру.
 
-Vn/game/screens.rpy - файл с настройками экрана.
+New-Year-Rush/Game/game/screens.rpy - файл с настройками экрана.
 
-Vn/game/script.rpy - файл с кодом игры(здесь пишут сюжет и механики).
+New-Year-Rush/Game/game/script.rpy - файл с кодом игры(здесь пишут сюжет и механики).
