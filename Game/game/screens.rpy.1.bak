@@ -366,7 +366,7 @@ screen main_menu():
         hotspot(449, 231, 375, 56) action FileLoad(1, confirm=False, page="auto", newest=True)
         hotspot(449, 301, 375, 56) action Start()
         hotspot(449, 371, 375, 56) action ShowMenu("load")
-        #hotspot(449, 231, 375, 56) action ShowMenu("gallery")
+        #hotspot(449, 231, 375, 56) action Start() галерея
         hotspot(449, 505, 375, 56) action ShowMenu("preferences")
         hotspot(1023, 624, 375, 56) action Quit(confirm=True)
 
