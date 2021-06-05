@@ -1,3 +1,4 @@
+#Персонажи
 define b = Character('Генадий Петрович', color="#778899", image="boss")
 define g = Character('Колян', color="#006400")
 define t = Character('Иван Васильевич', color="#FFE4C4", image="teacher")
@@ -9,7 +10,18 @@ define v = Character('Вика', color="#B22222", image="vika")
 define barista = Character('Бариста', color="#D2691E")
 define l = Character('Лёха', color="#FFFACD", image="lesha")
 
+#Для книг и аудиокниг
 define book = Character(what_italic = True, kind = nvl)
+
+#Музыка
+define audio.nikatheme = "music/nika_theme.ogg"
+define audio.tanyatheme = "music/tanya_theme.ogg"
+define audio.streettheme = "music/street.ogg"
+define audio.funnymus = "music/funny_theme.ogg"
+define audio.cafetheme = "music/cafe.ogg"
+define audio.goodend = "music/good_end.ogg"
+define audio.badend = "music/bad_end.ogg"
+define audio.nightroomtheme = "music/nightroom_theme.ogg"
 
 #Тренинг или книги(2 день)
 define training = False
@@ -75,10 +87,14 @@ init:
 
 label start:
     label Day_1:
+        stop music
+        
         scene black
         show text "{size=50}День 1{/size}" at truecenter
         with Dissolve(2)
         pause 3
+        
+        play music funnymus
 
         scene workplace with Dissolve(2)
         hide text
@@ -211,6 +227,8 @@ label start:
         Включаем и идем к остановке.{/cps}"
 
         scene street2 with fade
+        
+        play music streettheme
 
         "{cps=30}Выйдя на улицу, я почувствовал всю силу декабрьского мороза.{w}
         Аж вздрогнул.{w}
@@ -339,6 +357,8 @@ label start:
                 "{cps=30}Приятно чувствовать облегчение.{/cps}"
 
         scene nightroom with fade
+        
+        play music nightroomtheme
 
         "{cps=30}Как же хорошо вновь оказаться дома.{/cps}"
 
@@ -379,6 +399,8 @@ label start:
         jump Day_2
 
     label Day_2:
+        stop music 
+        
         scene room
         with Dissolve(5)
 
@@ -386,6 +408,8 @@ label start:
         show text "{size=50}День 2{/size}" at truecenter
         with Dissolve(2)
         pause 3
+        
+        play music funnymus
 
         scene room with Dissolve(2)
         hide text
@@ -612,6 +636,8 @@ label start:
             label coffee:
                 scene coffee with fade
                 #show barista at left with dissolve
+                
+                play music cafetheme
 
                 "{cps=30}На входе сразу цепляет атмосфера: мягкий свет, на вид удобные и мягкие кресла и улыбающийся бариста за стойкой в центре помещения.{/cps}"
 
@@ -699,6 +725,8 @@ label start:
 
             label training:
                 scene trainingroom with fade
+
+            play music nikatheme
 
             "{cps=30}В комнате находится человек 7, и они выглядят{w}…{w} обычно.{/cps}"
 
@@ -960,6 +988,8 @@ label start:
             label library:
                 scene library with fade
 
+            play music tanyatheme
+
             "{cps=30}Спустя некоторое время я уже стоял в библиотеке с книгами в руках.{w}
             Тут должно быть то, что мне нужно.{w}
             Главное это найти.{/cps}"
@@ -1150,6 +1180,8 @@ label start:
                     "{cps=30}Мы попрощались и я пошёл домой.{/cps}"
                     
         scene street2 with fade
+        
+        play music streettheme
 
         "{cps=30}По дороге домой, я вспомнил, что еще утром хотел купить пару круассанов в магазине.{/cps}"
 
@@ -1240,6 +1272,8 @@ label start:
         Как же это парадоксально.{/cps}"
 
         scene nightroom with fade
+        
+        play music nightroomtheme
 
         "{cps=30}Дойдя с такими мыслями до дома, я зашел в квартиру и решил, что лучше всего сейчас будет просто поспать.{/cps}"
 
@@ -1248,10 +1282,14 @@ label start:
         jump Day_3
 
     label Day_3:
+        stop music
+    
         scene black
         show text "{size=50}День 3{/size}" at truecenter
         with Dissolve(2)
         pause 3
+        
+        play music funnymus
 
         scene room with Dissolve(2)
 
@@ -1371,6 +1409,8 @@ label start:
               
         if training:
             scene trainingroom with fade
+            
+            play music nikatheme
         
             "{cps=30}Так, нас опять 8 человек.{w}
             С прошлого раза ничего не поменялось.{w}
@@ -2062,6 +2102,8 @@ label start:
             
         else:
             scene library with fade
+            
+            play music tanyatheme
         
             "{cps=30}Тогда можно всецело уделить внимание книге.{w}
             Думаю, если меня не заметят на работе, это будет не критично.{w}
@@ -2368,6 +2410,8 @@ label start:
             hide tanya with dissolve
             
         scene room with fade
+        
+        play music funnymus
             
         "{cps=30}Первая половина дня вышла довольно продуктивной.{w}
         А значит по закону сохранения энергии, который я адаптировал под нашу жизнь: Если много поработал, значит нужно много отдохнуть.{/cps}"
@@ -2508,6 +2552,8 @@ label start:
                         "{cps=30}Парам-пам-пам.{/cps}"
                         
                 "{cps=30}Разобравшись с этим таинственным запросом и запостив ещё парочку артов, я отправился в глубины Сети, чтобы провести там всё время, что у меня ещё осталось до конца дня.{/cps}"
+                
+                play music nightroomtheme
              
             "Прогулка с другом":
                 "{cps=30}Встретиться с друзьями.{w}
@@ -2599,6 +2645,8 @@ label start:
                 
                 scene coffee with fade
                 show lesha with dissolve
+                
+                play music cafetheme
                 
                 "{cps=30}Зайдя в полупустое кафе мы быстро осмотрелись.{w}
                 Я заметил столик в углу, рядом с окном и поспешил туда.{/cps}"
@@ -2704,6 +2752,8 @@ label start:
                 
                 scene street2 with fade
                 
+                play music streettheme
+                
                 "{cps=30}Иногда здорово просто взять, и сходить куда-то с другом.{w}
                 Помогает забыть проблемы.{w}
                 Но не с Лёхой.{/cps}"
@@ -2716,9 +2766,14 @@ label start:
                 И хорошо, что не уголовная.{/cps}"
                 
                 scene nightroom with fade
+                
+                stop music
+                
                 jump Day_4
                 
             "Безделье":  
+                play music nightroomtheme
+            
                 "{cps=30}Лежать в кровати и смотреть аниме.{w}
                 Чем я и займусь.{w}
                 По-моему - это прекрасно.{/cps}"
@@ -2728,10 +2783,14 @@ label start:
         jump Day_4
 
     label Day_4:
+        stop music
+        
         scene black
         show text "{size=50}День 4{/size}" at truecenter
         with Dissolve(2)
         pause 3
+        
+        play music funnymus
     
         scene room
         with Dissolve(5)
@@ -3085,6 +3144,8 @@ label start:
             
             scene street3 with fade
             
+            play music nikatheme
+            
             "{cps=30}Спустя некоторое время я уже стоял у места встречи.{w}
             Пришёл слегка пораньше, хотя и не планировал.{/cps}"
             
@@ -3246,6 +3307,8 @@ label start:
             
         scene nightroom with fade
         
+        play music nightroomtheme
+        
         "{cps=30}За окном уже стало смеркаться.{w}
         Так много времени прошло.{w}
         Я даже не заметил.{/cps}"
@@ -3262,6 +3325,8 @@ label start:
         Надеюсь, там всё хорошо, он принял мою статью и отстал от меня.{/cps}"
         
         if count == 16:
+            play music goodend
+            
             "{cps=30}“Николай, мне очень понравилась ваша работа. Она сделана шикарно. Её можно будет отправлять в печать в этом же виде. Думаю, со своей задачей вы справились полностью. Всего доброго.”{/cps}"
         
             "{cps=30}Йууууху.{w}
@@ -3280,6 +3345,8 @@ label start:
             Я заслужил.{/cps}"
             
         elif count < 16 and count >= 11:
+            play music goodend
+            
             "{cps=30}“Николай, мне понравилась ваша работа. В ней нужно будет внести некие правки, но в целом она неплохая. Надеюсь, вы продолжите в том же духе. Прикладываю правки. Всего доброго.”{/cps}"
             
             if f1:
@@ -3363,6 +3430,8 @@ label start:
             Отдыхать надо.{/cps}"
             
         else:
+            play music badend
+            
             "{cps=30}“Николай, вы молодец, что проделали такую работу, но в ней я заметил достаточно много ошибок. Надеюсь, вы помните наш уговор. В любом случае прикладываю вам правки с выделением мест, где вы допустили ошибки. Всего доброго”{/cps}"
             
             if f1:
